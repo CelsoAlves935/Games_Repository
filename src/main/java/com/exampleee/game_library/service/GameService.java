@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 import com.exampleee.game_library.model.Game;
 import com.exampleee.game_library.repository.GameRepository;
@@ -20,6 +21,15 @@ public class GameService {
 
     public List<Game> findAll() {
         return repository.findAll();
+    }
+
+    
+    public void delete(Long id) {
+        repository.deleteById(id);
+    }
+
+    public void update (Game jogo) {
+        repository.save(jogo);
     }
 
 }
