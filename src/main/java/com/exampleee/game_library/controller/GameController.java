@@ -28,6 +28,7 @@ public class GameController {
         return jogos.findAll();
     }
 
+
     @PostMapping("/NewGame")
     public Game newGame(@RequestBody Game jogo) {
         return jogos.save(jogo);

@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.DeleteMapping;
 
 import com.exampleee.game_library.model.Game;
 import com.exampleee.game_library.repository.GameRepository;
@@ -15,6 +14,8 @@ public class GameService {
     @Autowired
     private GameRepository repository;
 
+    private Game jogos;
+
     public Game save (Game jogo) {
         return repository.save(jogo);
     }
@@ -23,9 +24,15 @@ public class GameService {
         return repository.findAll();
     }
 
+   
+
     
     public void delete(Long id) {
-        repository.deleteById(id);
+        if (repository.existsById(id)) {
+            repository.deleteById(id);
+        } else {
+            System.out.println("Este jogo não está registrado!");
+        }
     }
 
     public void update (Game jogo) {
