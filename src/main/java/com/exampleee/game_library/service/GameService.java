@@ -24,7 +24,11 @@ public class GameService {
         return repository.findAll();
     }
 
-   
+   public List<Game> findZerado(boolean zerado) {
+    return repository.findByZerado(zerado);
+   }
+
+
 
     
     public void delete(Long id) {
