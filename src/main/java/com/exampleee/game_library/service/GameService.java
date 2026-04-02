@@ -14,7 +14,6 @@ public class GameService {
     @Autowired
     private GameRepository repository;
 
-    private Game jogos;
 
     public Game save (Game jogo) {
         return repository.save(jogo);
