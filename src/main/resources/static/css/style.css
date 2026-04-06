@@ -1,0 +1,24 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333 !important;
+    transition: tranform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.card-title {
+    color: #ffffff;
+}
+
+.text-muted {
+    color: #b0b0b0 !important;
+}
