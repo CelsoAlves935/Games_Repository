@@ -4,6 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.exampleee.game_library.model.Game;
 import com.exampleee.game_library.service.GameService;
@@ -18,10 +19,23 @@ public class GameViewController {
 
     @GetMapping("/")
     public String home(Model model) {
-        model.addAttribute("jogos", service.findAll());
         List<Game> lista = service.findAll();
         System.out.println("Quantidade de jogos encontrados: " + lista.size());
         model.addAttribute("jogos", lista);
         return "index"; // Faz com que ele busque o .html
+        
     }
+
+    @GetMapping("/novo")
+    public String formularioCadastro(Model model) {
+        model.addAttribute("game", new Game());
+        return "cadastro";
+    }
+
+    @PostMapping("/salvar")
+    public String salvarJogo(Game game) {
+        service.save(game);
+        return "redirect:/"; //Redireciona pra home.
+    }
+    
 }
