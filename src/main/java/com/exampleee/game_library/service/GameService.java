@@ -14,8 +14,7 @@ public class GameService {
     @Autowired
     private GameRepository repository;
 
-
-    public Game save (Game jogo) {
+    public Game save(Game jogo) {
         return repository.save(jogo);
     }
 
@@ -23,13 +22,10 @@ public class GameService {
         return repository.findAll();
     }
 
-   public List<Game> findZerado(boolean zerado) {
-    return repository.findByZerado(zerado);
-   }
+    public List<Game> findZerado(boolean zerado) {
+        return repository.findByZerado(zerado);
+    }
 
-
-
-    
     public void delete(Long id) {
         if (repository.existsById(id)) {
             repository.deleteById(id);
@@ -38,7 +34,16 @@ public class GameService {
         }
     }
 
-    public void update (Game jogo) {
+    public void deleteById(Long id) {
+        repository.deleteById(id);
+    }
+
+
+    public Game findById(Long id) {
+        return repository.findById(id).orElse(null);
+    }
+
+    public void update(Game jogo) {
         repository.save(jogo);
     }
 

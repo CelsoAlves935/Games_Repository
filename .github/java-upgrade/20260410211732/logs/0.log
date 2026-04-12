@@ -1,0 +1,566 @@
+2026-04-10T21:17:32.027Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:17:32.027Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "event": "precheckCompleted",
+  "phase": "precheck",
+  "status": "succeeded"
+}}).
+2026-04-10T21:17:32.027Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:17:32.034Z [INFO] Project d:\Codigos\Projeto Pessoal\Biblioteca_Games\Games_Repository is a maven project, try to get java version from pom.xml
+2026-04-10T21:17:32.035Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'precheckCompleted' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:17:32.036Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:17:32.038Z [INFO] Project java version: 21
+2026-04-10T21:17:32.039Z [INFO] Maven project detected.
+2026-04-10T21:17:32.039Z [INFO] Build tool type: mvnw
+2026-04-10T21:17:32.306Z [INFO] JDK: undefined
+2026-04-10T21:17:32.306Z [ERROR] Failed to detect or resolve JDK for the project at d:\Codigos\Projeto Pessoal\Biblioteca_Games\Games_Repository.
+2026-04-10T21:17:32.306Z [ERROR] [ReportEventTool] Failed to send project info telemetry: UserError: Failed to detect or resolve JDK for the project at d:\Codigos\Projeto Pessoal\Biblioteca_Games\Games_Repository. Please ensure JDK 21 is installed and properly configured on the machine.
+2026-04-10T21:17:35.209Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:17:35.209Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "event": "planGenerationStarted",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:17:35.209Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:17:35.210Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:17:35.210Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:17:35.275Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:17:35.275Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "event": "planGenerationStarted",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:17:35.276Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:17:35.276Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'planGenerationStarted' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:17:35.276Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:17:39.909Z [INFO] ---------------------prepare appmod-list-jdks----------------------
+2026-04-10T21:17:39.910Z [INFO] [Tool.prepareInvocation]({name: appmod-list-jdks, input: {
+  "sessionId": "20260410211732"
+}}).
+2026-04-10T21:17:39.910Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:17:39.911Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "List jdks"
+}}).
+2026-04-10T21:17:39.911Z [INFO] ----------------------prepared appmod-list-jdks----------------------
+2026-04-10T21:17:39.940Z [INFO] ----------------------invoke appmod-list-jdks----------------------
+2026-04-10T21:17:39.940Z [INFO] [Tool.invoke]({name: appmod-list-jdks, input: {
+  "sessionId": "20260410211732"
+}}).
+2026-04-10T21:17:39.941Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:17:39.948Z [INFO] [Tool.invoke]({result: {
+  "message": "We found following jdks in your system:\n\n1. Java 24\n   📁 Path: C:\\Program Files\\Java\\jdk-24\\bin\n   🏷️ Source: JAVA_HOME\n\nTotal: 1 JDK installation(s) found"
+}}).
+2026-04-10T21:17:39.948Z [INFO] ----------------------invoked appmod-list-jdks----------------------
+2026-04-10T21:17:39.958Z [INFO] ---------------------prepare appmod-list-mavens----------------------
+2026-04-10T21:17:39.958Z [INFO] [Tool.prepareInvocation]({name: appmod-list-mavens, input: {
+  "sessionId": "20260410211732",
+  "includeVersion": true
+}}).
+2026-04-10T21:17:39.959Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:17:39.959Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "List mavens"
+}}).
+2026-04-10T21:17:39.959Z [INFO] ----------------------prepared appmod-list-mavens----------------------
+2026-04-10T21:17:39.985Z [INFO] ----------------------invoke appmod-list-mavens----------------------
+2026-04-10T21:17:39.985Z [INFO] [Tool.invoke]({name: appmod-list-mavens, input: {
+  "sessionId": "20260410211732",
+  "includeVersion": true
+}}).
+2026-04-10T21:17:39.985Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:17:39.989Z [INFO] [Tool.invoke]({result: {
+  "message": "No Maven installations found."
+}}).
+2026-04-10T21:17:39.989Z [INFO] ----------------------invoked appmod-list-mavens----------------------
+2026-04-10T21:17:44.126Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:17:44.126Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "event": "planInitialized",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:17:44.126Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:17:44.127Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:17:44.127Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:17:44.193Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:17:44.193Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "event": "planInitialized",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:17:44.193Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:17:44.195Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'planInitialized' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:17:44.195Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:19:18.068Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:19:18.069Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "event": "environmentAnalyzed",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:19:18.069Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:19:18.069Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:19:18.069Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:19:18.119Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:19:18.119Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "event": "environmentAnalyzed",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:19:18.119Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:19:18.120Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'environmentAnalyzed' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:19:18.120Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:19:18.137Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:19:18.138Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "event": "dependenciesAnalyzed",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:19:18.138Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:19:18.138Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:19:18.138Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:19:18.185Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:19:18.185Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "event": "dependenciesAnalyzed",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:19:18.185Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:19:18.186Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'dependenciesAnalyzed' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:19:18.186Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:19:18.205Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:19:18.205Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "event": "upgradePathDesigned",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:19:18.205Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:19:18.205Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:19:18.206Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:19:18.269Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:19:18.270Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "event": "upgradePathDesigned",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:19:18.270Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:19:18.271Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'upgradePathDesigned' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:19:18.271Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:19:18.292Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:19:18.293Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "event": "planReviewed",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:19:18.293Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:19:18.293Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:19:18.294Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:19:18.370Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:19:18.370Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "event": "planReviewed",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:19:18.370Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:19:18.371Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'planReviewed' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:19:18.371Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:19:20.203Z [INFO] ---------------------prepare appmod-confirm-upgrade-plan----------------------
+2026-04-10T21:19:20.203Z [INFO] [Tool.prepareInvocation]({name: appmod-confirm-upgrade-plan, input: {
+  "sessionId": "20260410211732"
+}}).
+2026-04-10T21:19:20.204Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:19:20.204Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Review [upgrade plan](file:///d:/Codigos/Projeto Pessoal/Biblioteca_Games/Games_Repository/.github/java-upgrade/20260410211732/plan.md)",
+  "confirmationMessages": {
+    "title": "Plan generated",
+    "message": "Please review the generated plan and make any necessary adjustments before proceeding. You can modify the generated [`plan.md`](file:///d:/Codigos/Projeto Pessoal/Biblioteca_Games/Games_Repository/.github/java-upgrade/20260410211732/plan.md) directly."
+  }
+}}).
+2026-04-10T21:19:20.204Z [INFO] ----------------------prepared appmod-confirm-upgrade-plan----------------------
+2026-04-10T21:20:04.712Z [INFO] ----------------------invoke appmod-confirm-upgrade-plan----------------------
+2026-04-10T21:20:04.712Z [INFO] [Tool.invoke]({name: appmod-confirm-upgrade-plan, input: {
+  "sessionId": "20260410211732"
+}}).
+2026-04-10T21:20:04.712Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:20:04.713Z [INFO] Upgrade plan confirmed successfully.
+2026-04-10T21:20:04.715Z [INFO] [Tool.invoke]({result: {
+  "message": "Generated plan is reviewed and confirmed by the user! the upgrade process will start now and be tracked in markdown file: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732\\progress.md."
+}}).
+2026-04-10T21:20:04.715Z [INFO] ----------------------invoked appmod-confirm-upgrade-plan----------------------
+2026-04-10T21:20:11.006Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:20:11.006Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "event": "planConfirmed",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:20:11.006Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:20:11.007Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:20:11.007Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:20:11.056Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:20:11.057Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "event": "planConfirmed",
+  "phase": "plan",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:20:11.057Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:20:11.058Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'planConfirmed' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:20:11.058Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:20:16.769Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:20:16.769Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "event": "planExecutionStarted",
+  "phase": "execute",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:20:16.773Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:20:16.773Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:20:16.773Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:20:16.885Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:20:16.886Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "event": "planExecutionStarted",
+  "phase": "execute",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:20:16.886Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:20:16.968Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'planExecutionStarted' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:20:16.968Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:20:28.801Z [INFO] ---------------------prepare appmod-install-jdk----------------------
+2026-04-10T21:20:28.801Z [INFO] [Tool.prepareInvocation]({name: appmod-install-jdk, input: {
+  "sessionId": "20260410211732",
+  "version": "21"
+}}).
+2026-04-10T21:20:28.801Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:20:29.019Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Download and install JDK",
+  "confirmationMessages": {
+    "title": "Download and install JDK",
+    "message": "\nThis tool will download and install JDK 21 from Microsoft with below settings.\n- **Version**: 21\n- **Vendor**: Microsoft\n- **Url**: https://aka.ms/download-jdk/microsoft-jdk-21.0.8-windows-x64.zip\n- **Destination**: `C:\\Users\\celso\\.jdk`\n- **Checksum**: SHA256: 6ecfa864b95a45cde05d92351edf06d33b778669499b485bb8414145704fae0a\n- **Signature**: https://aka.ms/download-jdk/microsoft-jdk-21.0.8-windows-x64.zip.sig\n- **Public Key**: http://aka.ms/microsoft_jdk_public_key\n"
+  }
+}}).
+2026-04-10T21:20:29.019Z [INFO] ----------------------prepared appmod-install-jdk----------------------
+2026-04-10T21:20:33.468Z [INFO] ----------------------invoke appmod-install-jdk----------------------
+2026-04-10T21:20:33.469Z [INFO] [Tool.invoke]({name: appmod-install-jdk, input: {
+  "sessionId": "20260410211732",
+  "version": "21"
+}}).
+2026-04-10T21:20:33.469Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:20:50.002Z [INFO] [Tool.invoke]({result: {
+  "result": {
+    "name": "java",
+    "path": "C:\\Users\\celso\\.jdk\\jdk-21.0.8\\bin",
+    "version": "21.0.8"
+  },
+  "message": "JDK 21 is installed at C:\\Users\\celso\\.jdk\\jdk-21.0.8\\bin",
+  "telemetry": {
+    "tool": "JDK",
+    "version": "21"
+  }
+}}).
+2026-04-10T21:20:50.002Z [INFO] ----------------------invoked appmod-install-jdk----------------------
+2026-04-10T21:20:53.375Z [INFO] ---------------------prepare appmod-install-jdk----------------------
+2026-04-10T21:20:53.375Z [INFO] [Tool.prepareInvocation]({name: appmod-install-jdk, input: {
+  "sessionId": "20260410211732",
+  "version": "25"
+}}).
+2026-04-10T21:20:53.375Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:20:53.599Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Download and install JDK",
+  "confirmationMessages": {
+    "title": "Download and install JDK",
+    "message": "\nThis tool will download and install JDK 25 from Adoptium with below settings.\n- **Version**: 25\n- **Vendor**: Adoptium\n- **Url**: https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_x64_windows_hotspot_25.0.2_10.zip\n- **Destination**: `C:\\Users\\celso\\.jdk`\n- **Checksum**: SHA256: 06ac5f5444a1269dd11d11cbb7ab6ebaecedc60dc1caca82cdb56f29100b7b8c\n- **Signature**: https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_x64_windows_hotspot_25.0.2_10.zip.sig\n- **Public Key**: https://packages.adoptium.net/artifactory/api/gpg/key/public\n"
+  }
+}}).
+2026-04-10T21:20:53.600Z [INFO] ----------------------prepared appmod-install-jdk----------------------
+2026-04-10T21:20:53.666Z [INFO] ----------------------invoke appmod-install-jdk----------------------
+2026-04-10T21:20:53.666Z [INFO] [Tool.invoke]({name: appmod-install-jdk, input: {
+  "sessionId": "20260410211732",
+  "version": "25"
+}}).
+2026-04-10T21:20:53.666Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:21:06.495Z [INFO] [Tool.invoke]({result: {
+  "result": {
+    "name": "java",
+    "path": "C:\\Users\\celso\\.jdk\\jdk-25\\bin",
+    "version": "25"
+  },
+  "message": "JDK 25 is installed at C:\\Users\\celso\\.jdk\\jdk-25\\bin",
+  "telemetry": {
+    "tool": "JDK",
+    "version": "25"
+  }
+}}).
+2026-04-10T21:21:06.495Z [INFO] ----------------------invoked appmod-install-jdk----------------------
+2026-04-10T21:21:13.574Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:21:13.574Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "event": "environmentSetup",
+  "phase": "execute",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded",
+  "details": {
+    "jdkPath": "C:\\Users\\celso\\.jdk\\jdk-21.0.8\\bin",
+    "buildToolPath": "."
+  }
+}}).
+2026-04-10T21:21:13.575Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:21:13.575Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:21:13.575Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:21:13.660Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:21:13.660Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "event": "environmentSetup",
+  "phase": "execute",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded",
+  "details": {
+    "jdkPath": "C:\\Users\\celso\\.jdk\\jdk-21.0.8\\bin",
+    "buildToolPath": "."
+  }
+}}).
+2026-04-10T21:21:13.661Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:21:13.663Z [INFO] Project d:\Codigos\Projeto Pessoal\Biblioteca_Games\Games_Repository is a maven project, try to get java version from pom.xml
+2026-04-10T21:21:13.664Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'environmentSetup' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:21:13.664Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:21:13.665Z [INFO] Project java version: 21
+2026-04-10T21:21:13.666Z [INFO] Maven project detected.
+2026-04-10T21:21:13.666Z [INFO] Build tool type: mvnw
+2026-04-10T21:21:13.667Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Users\\celso\\.jdk\\jdk-21.0.8\\bin",
+  "version": "21"
+}
+2026-04-10T21:21:13.667Z [INFO] Build tool: {
+  "name": "mvnw",
+  "path": ".",
+  "version": ""
+}
+2026-04-10T21:21:13.667Z [INFO] Project config: {
+  "buildTool": {
+    "path": ".",
+    "name": "mvnw",
+    "version": ""
+  },
+  "jdk": {
+    "path": "C:\\Users\\celso\\.jdk\\jdk-21.0.8\\bin",
+    "name": "java",
+    "version": "21"
+  },
+  "name": "Games_Repository",
+  "dir": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository"
+}
+2026-04-10T21:22:17.711Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:22:17.712Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "event": "baselineSetup",
+  "phase": "execute",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:22:17.712Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:22:17.712Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:22:17.712Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:22:17.827Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:22:17.827Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "event": "baselineSetup",
+  "phase": "execute",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:22:17.827Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:22:17.828Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'baselineSetup' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:22:17.828Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:22:55.283Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:22:55.283Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "event": "upgradeStepStarted",
+  "phase": "execute",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded",
+  "details": {
+    "stepNumber": 3,
+    "stepTitle": "Upgrade Java Version"
+  }
+}}).
+2026-04-10T21:22:55.283Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:22:55.284Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:22:55.284Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:22:55.412Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:22:55.412Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "event": "upgradeStepStarted",
+  "phase": "execute",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded",
+  "details": {
+    "stepNumber": 3,
+    "stepTitle": "Upgrade Java Version"
+  }
+}}).
+2026-04-10T21:22:55.413Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:22:55.413Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'upgradeStepStarted' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:22:55.413Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:24:07.456Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:24:07.457Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "details": {
+    "stepNumber": 4,
+    "stepTitle": "Final Validation",
+    "commitId": "5d7ac19fc77e9f0379e95b5d09bfc7e1f5784086"
+  },
+  "event": "upgradeValidationCompleted",
+  "phase": "execute",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:24:07.457Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:24:07.457Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:24:07.457Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:24:07.530Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:24:07.530Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "details": {
+    "stepNumber": 4,
+    "stepTitle": "Final Validation",
+    "commitId": "5d7ac19fc77e9f0379e95b5d09bfc7e1f5784086"
+  },
+  "event": "upgradeValidationCompleted",
+  "phase": "execute",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:24:07.530Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:24:07.531Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'upgradeValidationCompleted' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:24:07.531Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:24:07.564Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:24:07.565Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "event": "planExecutionCompleted",
+  "phase": "execute",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:24:07.565Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:24:07.565Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:24:07.565Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:24:07.709Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:24:07.709Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "event": "planExecutionCompleted",
+  "phase": "execute",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:24:07.710Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:24:07.712Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'planExecutionCompleted' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:24:07.712Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-04-10T21:24:48.028Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-04-10T21:24:48.028Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "message": "Java 21 LTS → Java 25 LTS upgrade completed successfully. All tests pass (1/1). Zero code changes required. Ready for deployment.",
+  "event": "summaryGenerated",
+  "phase": "summarize",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:24:48.028Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-04-10T21:24:48.028Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-04-10T21:24:48.028Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-04-10T21:24:48.112Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-04-10T21:24:48.112Z [INFO] [Tool.invoke]({name: appmod-report-event, input: {
+  "message": "Java 21 LTS → Java 25 LTS upgrade completed successfully. All tests pass (1/1). Zero code changes required. Ready for deployment.",
+  "event": "summaryGenerated",
+  "phase": "summarize",
+  "projectPath": "d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository",
+  "sessionId": "20260410211732",
+  "status": "succeeded"
+}}).
+2026-04-10T21:24:48.113Z [INFO] [Tool.invoke] do invoke.
+2026-04-10T21:24:48.114Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'summaryGenerated' reported!\nSession ID: 20260410211732,\nSession Dir: d:\\Codigos\\Projeto Pessoal\\Biblioteca_Games\\Games_Repository\\.github\\java-upgrade\\20260410211732"
+}}).
+2026-04-10T21:24:48.114Z [INFO] ----------------------invoked appmod-report-event----------------------
