@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
-        <title>Cadastrar Jogo</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" >
-        <link rel="stylesheet" th:href="@{/css/style.css}">
-    </head>
-    <body class="container mt-5">
-        <h1>Novo Jogo 🎮</h1>
 
-        <form th:action="@{/salvar}" th:object="${game}" method="post" class="mt-4">
-            <div class="mb-3">
-                <label class="form-label">Título:</label>
-                <input type="text" th:field="*{titulo}" class="form-control" placeholder="Ex: Elden Ring" required>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Jogo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 p-4">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Novo Jogo 🎮</h2>
+
+                    <form th:action="@{/salvar}" th:object="${game}" method="post">
+                        <input type="hidden" th:field="*{id}">
+                        
+                        <div class="mb-3">
+                            <label class="card-title fw-bold">Título</label>
+                            <input type="text" th:field="*{titulo}"
+                                class="form-control bg-dark text-white border-secondary" placeholder="Ex: Elden Ring"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Plataforma</label>
+                            <input type="text" th:field="*{plataforma}"
+                                class="form-control bg-dark text-white border-secondary" placeholder="Ex: PC / PS6">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Gênero</label>
+                            <input type="text" th:field="*{genero}"
+                                class="form-control bg-dark text-white border-secondary"
+                                placeholder="Ex: RPG, Ação, FPS">
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" th:field="*{zerado}" class="form-check-input" id="zeradoCheck">
+                            <label class="form-check-label" for="zeradoCheck">Já zerou este jogo? ✅</label>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-block mt-4">
+                            <button type="submit" class="btn btn-success px-4">Salvar Jogo</button>
+                            <a href="/" class="btn btn-secondary px-4">Cancelar</a>
+                        </div>
+                    </form>
+                    
+                </div>
             </div>
 
-            <div class="mb-3">
-                <label class="form-label">Plataforma</label>
-                <input type="text" th:field="*{plataforma}" class="form-control" placeholder="Ex: PC / PS6">
-            </div>
+        </div>
+    </div>
+    
+</body>
 
-            <!-- <div class="mb-3">
-                <label class="form-label">Zerado</label>
-                <input type="text" th:field="*{zerado}" class="form-control" placeholder="Ex:Sim ou não">
-            </div> -->
-
-            <button type="submit" class="btn btn-success">Salvar jogo</button>
-            <a href="/" class="btn btn-secondary">Cancelar</a>
-        </form>
-    </body>
 </html>

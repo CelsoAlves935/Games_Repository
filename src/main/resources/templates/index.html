@@ -18,10 +18,37 @@
             <a th:href="@{/novo}" class="btn btn-primary">Novo Jogo</a>
         </div>
 
+        <div class="card mb-4 border-0 shadow-sm bg-dark text-white">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <h5 class="mb-0">Sua Estante</h5>
+                        <p class="text-muted mb-0">
+                            Você tem <span class="text-white fw-bold" th:text="${totalJogos}">0</span> jogos, <span
+                                class="text-success fw-bold" th:text="${totalZerados}">0</span> zerados.
+                        </p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Progresso da Platina</span>
+                            <span th:text="${porcentagem} + '%'">0%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                role="progressbar" th:style="'width: ' + ${porcentagem} + '%'"
+                                th:aria-valuenow="${porcentagem}" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
 
             <div class="col" th:each="game : ${jogos}">
-                <div class="card h-100 shadow-sm border-0 bg-light">
+                <div class="card h-100 shadow-sm border border-2"
+                    th:classappend="${game.zerado} ? 'border-success' : 'border-warning'">
                     <div class="card-body">
                         <h5 class="card-title fw-bold" th:text="${game.titulo}">Título</h5>
                         <p class="card-text text-muted mb-2">
@@ -36,8 +63,13 @@
 
                     <div class="card-footer bg-transparent border-0 pb-3">
                         <div class="btn-group w-100">
-                            <button class="btn btn-outline-secondary btn-sm">Editar</button>
-                            <button class="btn btn-outline-danger btn-sm">Excluir</button>
+                            <a th:href="@{/editar/{id}(id=${game.id})}"
+                                class="btn btn-outline-secondary btn-sm">Editar</a>
+                            <a th:href="@{/excluir/{id}(id=${game.id})}" class="btn btn-outline-danger btn-sm"
+                                onclick="return confirm('Tem certeza que deseja apagar este jogo?')">
+                                Excluir
+                            </a>
+
                         </div>
                     </div>
                 </div>
