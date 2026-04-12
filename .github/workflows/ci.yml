@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: # O 'steps' fica dentro de 'build'
-      - name: Baixando o código do repositórios 📂
+      - name: Baixando o código do repositório 📂
         uses: actions/checkout@v4
 
       - name: Instalando o Java JDK ☕
