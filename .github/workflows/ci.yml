@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [17, 21]
 
     steps: # O 'steps' fica dentro de 'build'
       - name: Baixando o código do repositórios 📂
