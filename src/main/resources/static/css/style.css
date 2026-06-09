@@ -84,6 +84,28 @@ body {
     border-top: 3px solid #ffc107 !important;
 }
 
+/* Transformando TODOS os botões em estilo 3D (Tátil) */
+.btn {
+    position: relative;
+    transition: all 0.1s ease-in-out !important;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.7), 0 6px 10px rgba(0, 0, 0, 0.4) !important;
+    transform: translateY(0);
+    border-radius: 8px !important;
+    font-weight: bold !important;
+    border: none !important; /* Removemos a borda padrão para focar no 3D da sombra */
+}
+
+/* Opcional: brilho ao passar o mouse */
+.btn:hover {
+    filter: brightness(1.15);
+}
+
+/* Efeito de Clique "Afundando" o botão */
+.btn:active {
+    transform: translateY(4px) !important;
+    box-shadow: 0 0px 0 rgba(0, 0, 0, 0.7), 0 2px 3px rgba(0, 0, 0, 0.4) !important;
+}
+
 .card-title {
     color: #ffffff;
 }
