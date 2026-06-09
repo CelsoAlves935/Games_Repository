@@ -25,17 +25,18 @@
                         <h5 class="mb-0">Sua Estante</h5>
                         <p class="text-muted mb-0">
                             Você tem <span class="text-white fw-bold" th:text="${totalJogos}">0</span> jogos, <span
-                                class="text-success fw-bold" th:text="${totalZerados}">0</span> zerados.
+                                class="text-success fw-bold" th:text="${totalZerados}">0</span> zerados e <span
+                                class="text-info fw-bold" th:text="${totalPlatinados}">0</span> platinados.
                         </p>
                     </div>
                     <div class="col-md-8">
                         <div class="d-flex justify-content-between mb-1">
-                            <span>Progresso da Platina</span>
+                            <span>Progresso da Platina 🏆</span>
                             <span th:text="${porcentagem} + '%'">0%</span>
                         </div>
                         <div class="progress" style="height: 10px;">
-                            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
-                                role="progressbar" th:style="'width: ' + ${porcentagem} + '%'"
+                            <div class="progress-bar progress-bar-platinum progress-bar-striped progress-bar-animated"
+                                role="progressbar" th:style="'--target-width: ' + ${porcentagem} + '%;'"
                                 th:aria-valuenow="${porcentagem}" aria-valuemin="0" aria-valuemax="100">
                             </div>
                         </div>
@@ -44,21 +45,43 @@
             </div>
         </div>
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+        <!-- Filtros e Busca -->
+        <div class="row mb-4">
+            <div class="col-md-6 mb-2">
+                <input type="text" id="searchInput" class="form-control bg-dark text-white border-secondary" placeholder="🔍 Buscar jogo por título ou plataforma...">
+            </div>
+            <div class="col-md-6 mb-2 d-flex gap-2 flex-wrap">
+                <button class="btn btn-outline-primary filter-btn active" data-filter="all">Todos</button>
+                <button class="btn btn-outline-info filter-btn" data-filter="platinado">Platinados 🏆</button>
+                <button class="btn btn-outline-success filter-btn" data-filter="zerado">Apenas Zerados ✅</button>
+                <button class="btn btn-outline-warning filter-btn" data-filter="jogando">Jogando 🕹️</button>
+            </div>
+        </div>
 
-            <div class="col" th:each="game : ${jogos}">
-                <div class="card h-100 shadow-sm border border-2"
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4" id="gameGrid">
+
+            <div class="col game-card-col" th:each="game : ${jogos}">
+                <div class="card h-100 shadow-sm border border-2 game-card"
+                    th:data-titulo="${#strings.toLowerCase(game.titulo)}"
+                    th:data-plataforma="${#strings.toLowerCase(game.plataforma)}"
+                    th:data-zerado="${game.zerado}"
+                    th:data-platinado="${game.platinado}"
                     th:classappend="${game.zerado} ? 'border-success' : 'border-warning'">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-bold" th:text="${game.titulo}">Título</h5>
                         <p class="card-text text-muted mb-2">
                             <small th:text="${game.plataforma}">Plataforma</small>
                         </p>
 
-                        <span class="badge rounded-pill"
-                            th:classappend="${game.zerado} ? 'bg-success' : 'bg-warning text-dark'"
-                            th:text="${game.zerado ? 'Zerado ✅' : 'Jogando 🕹️'}">
-                        </span>
+                        <div class="mt-auto">
+                            <span class="badge rounded-pill"
+                                th:classappend="${game.zerado} ? 'bg-success' : 'bg-warning text-dark'"
+                                th:text="${game.zerado ? 'Zerado ✅' : 'Jogando 🕹️'}">
+                            </span>
+                            <span th:if="${game.platinado}" class="badge rounded-pill bg-info text-dark ms-1">
+                                Platinado 🏆
+                            </span>
+                        </div>
                     </div>
 
                     <div class="card-footer bg-transparent border-0 pb-3">
@@ -78,6 +101,50 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('searchInput');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const gameCards = document.querySelectorAll('.game-card-col');
+
+            function filterGames() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+
+                gameCards.forEach(card => {
+                    const gameCard = card.querySelector('.game-card');
+                    const titulo = gameCard.getAttribute('data-titulo') || '';
+                    const plataforma = gameCard.getAttribute('data-plataforma') || '';
+                    const isZerado = gameCard.getAttribute('data-zerado') === 'true';
+                    const isPlatinado = gameCard.getAttribute('data-platinado') === 'true';
+
+                    const matchesSearch = titulo.includes(searchTerm) || plataforma.includes(searchTerm);
+                    
+                    let matchesFilter = false;
+                    if (activeFilter === 'all') matchesFilter = true;
+                    if (activeFilter === 'platinado' && isPlatinado) matchesFilter = true;
+                    if (activeFilter === 'zerado' && isZerado && !isPlatinado) matchesFilter = true;
+                    if (activeFilter === 'jogando' && !isZerado) matchesFilter = true;
+
+                    if (matchesSearch && matchesFilter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            if (searchInput) searchInput.addEventListener('input', filterGames);
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    filterGames();
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

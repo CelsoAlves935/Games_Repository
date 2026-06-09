@@ -39,3 +39,14 @@ body {
     color: #ffffff;
     font-weight: 500;
 }
+
+/* Animação e Gradiente da Platina */
+.progress-bar-platinum {
+    background: linear-gradient(90deg, #1d976c 0%, #93f9b9 100%) !important;
+    animation: fillProgress 1.5s ease-out forwards;
+}
+
+@keyframes fillProgress {
+    from { width: 0%; }
+    to { width: var(--target-width); }
+}

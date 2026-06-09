@@ -17,7 +17,7 @@
 
                     <form th:action="@{/salvar}" th:object="${game}" method="post">
                         <input type="hidden" th:field="*{id}">
-                        
+
                         <div class="mb-3">
                             <label class="card-title fw-bold">Título</label>
                             <input type="text" th:field="*{titulo}"
@@ -27,15 +27,39 @@
 
                         <div class="mb-3">
                             <label class="form-label">Plataforma</label>
-                            <input type="text" th:field="*{plataforma}"
-                                class="form-control bg-dark text-white border-secondary" placeholder="Ex: PC / PS6">
+                            <select th:field="*{plataforma}" class="form-select bg-dark text-white border-secondary" required>
+                                <option value="" disabled selected>Selecione uma plataforma</option>
+                                <option value="PS1">PS1</option>
+                                <option value="PS2">PS2</option>
+                                <option value="PS3">PS3</option>
+                                <option value="PS4">PS4</option>
+                                <option value="PSP">PSP</option>
+                                <option value="Nintendo Switch">Nintendo Switch</option>
+                                <option value="Nintendo 3DS">Nintendo 3DS</option>
+                                <option value="Nintendo DS">Nintendo DS</option>
+                                <option value="PC">PC</option>
+                            </select>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Gênero</label>
-                            <input type="text" th:field="*{genero}"
-                                class="form-control bg-dark text-white border-secondary"
-                                placeholder="Ex: RPG, Ação, FPS">
+                            <select th:field="*{genero}" class="form-select bg-dark text-white border-secondary"
+                                required>
+                                <option value="" disabled selected>Selecione um gênero</option>
+                                <option value="Ação">Ação</option>
+                                <option value="Aventura">Aventura</option>
+                                <option value="RPG">RPG</option>
+                                <option value="FPS / Tiro">FPS / Tiro</option>
+                                <option value="Esporte">Esporte</option>
+                                <option value="Corrida">Corrida</option>
+                                <option value="Luta">Luta</option>
+                                <option value="Plataforma">Plataforma</option>
+                                <option value="Puzzle / Quebra-cabeça">Puzzle</option>
+                                <option value="Estratégia">Estratégia</option>
+                                <option value="Terror">Terror</option>
+                                <option value="Terror">Arena Battle</option>
+                                <option value="Outros">Outros</option>
+                            </select>
                         </div>
 
                         <div class="mb-3 form-check">
@@ -43,18 +67,23 @@
                             <label class="form-check-label" for="zeradoCheck">Já zerou este jogo? ✅</label>
                         </div>
 
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" th:field="*{platinado}" class="form-check-input" id="platinadoCheck">
+                            <label class="form-check-label" for="platinadoCheck">Já platinou este jogo? 🏆</label>
+                        </div>
+
                         <div class="d-grid gap-2 d-md-block mt-4">
                             <button type="submit" class="btn btn-success px-4">Salvar Jogo</button>
                             <a href="/" class="btn btn-secondary px-4">Cancelar</a>
                         </div>
                     </form>
-                    
+
                 </div>
             </div>
 
         </div>
     </div>
-    
+
 </body>
 
 </html>

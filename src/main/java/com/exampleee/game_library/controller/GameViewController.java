@@ -24,13 +24,15 @@ public class GameViewController {
         
         long totalJogos = lista.size();
         long totalZerados = lista.stream().filter(Game::isZerado).count();
-        long porcentagem = totalJogos == 0 ? 0 : (totalZerados * 100) / totalJogos;
+        long totalPlatinados = lista.stream().filter(Game::isPlatinado).count();
+        long porcentagem = totalJogos == 0 ? 0 : (totalPlatinados * 100) / totalJogos;
         
         System.out.println("Quantidade de jogos encontrados: " + totalJogos);
         
         model.addAttribute("jogos", lista);
         model.addAttribute("totalJogos", totalJogos);
         model.addAttribute("totalZerados", totalZerados);
+        model.addAttribute("totalPlatinados", totalPlatinados);
         model.addAttribute("porcentagem", porcentagem);
         
         return "index"; // Faz com que ele busque o .html

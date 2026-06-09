@@ -1,0 +1,6 @@
+#FileLock
+#Tue Jun 09 17:35:10 BRT 2026
+hostName=LAB-32
+id=19eae1897b986098a383b27ba8122ceb9772018bb5f
+method=file
+server=10.0.50.118\:65381
