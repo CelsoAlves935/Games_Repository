@@ -26,16 +26,12 @@ public class GameService {
         return repository.findByZerado(zerado);
     }
 
-    public void delete(Long id) {
+    public void deleteById(Long id) {
         if (repository.existsById(id)) {
             repository.deleteById(id);
         } else {
             System.out.println("Este jogo não está registrado!");
         }
-    }
-
-    public void deleteById(Long id) {
-        repository.deleteById(id);
     }
 
 

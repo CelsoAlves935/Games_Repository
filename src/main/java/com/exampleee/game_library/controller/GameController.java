@@ -19,35 +19,33 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
-@RequestMapping("/games")
+@RequestMapping("/api/games")
 public class GameController {
 
     @Autowired
     private GameService jogos;
 
-    @GetMapping("/Jogos")
-    public List<Game> GameList() {
+    @GetMapping
+    public List<Game> findAll() {
         return jogos.findAll();
     }
 
     @GetMapping("/filtrar")
-    public List<Game> GameFinished (@RequestParam boolean zerado) {
+    public List<Game> findZerados(@RequestParam boolean zerado) {
         return jogos.findZerado(zerado);
     }
 
-
-    @PostMapping("/NewGame")
-    public Game newGame(@RequestBody Game jogo) {
+    @PostMapping
+    public Game create(@RequestBody Game jogo) {
         return jogos.save(jogo);
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        jogos.delete(id);
+        jogos.deleteById(id);
     }
 
-    
-    @PutMapping("/Jogos/{id}")
+    @PutMapping("/{id}")
     public void update(@PathVariable Long id, @RequestBody Game jogo) {
         jogo.setId(id); // Garante que o ID da URL seja aplicado ao objeto
         jogos.update(jogo);

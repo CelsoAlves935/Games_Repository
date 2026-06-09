@@ -21,10 +21,19 @@ public class GameViewController {
     @GetMapping("/")
     public String home(Model model) {
         List<Game> lista = service.findAll();
-        System.out.println("Quantidade de jogos encontrados: " + lista.size());
+        
+        long totalJogos = lista.size();
+        long totalZerados = lista.stream().filter(Game::isZerado).count();
+        long porcentagem = totalJogos == 0 ? 0 : (totalZerados * 100) / totalJogos;
+        
+        System.out.println("Quantidade de jogos encontrados: " + totalJogos);
+        
         model.addAttribute("jogos", lista);
+        model.addAttribute("totalJogos", totalJogos);
+        model.addAttribute("totalZerados", totalZerados);
+        model.addAttribute("porcentagem", porcentagem);
+        
         return "index"; // Faz com que ele busque o .html
-
     }
 
     @GetMapping("/novo")
