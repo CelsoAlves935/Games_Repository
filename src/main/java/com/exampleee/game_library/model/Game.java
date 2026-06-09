@@ -26,4 +26,17 @@ public class Game {
 
     @Column(columnDefinition = "boolean default false")
     private boolean platinado;
+
+    @Column(length = 2000)
+    private String urlCapa;
+
+    private Integer notaZerado;
+
+    @Column(length = 2000)
+    private String opiniaoZerado;
+
+    private Integer notaPlatina;
+
+    @Column(length = 2000)
+    private String opiniaoPlatina;
 }

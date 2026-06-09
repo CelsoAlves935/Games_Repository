@@ -26,6 +26,12 @@
                         </div>
 
                         <div class="mb-3">
+                            <label class="form-label">Link da Imagem da Capa (Opcional)</label>
+                            <input type="url" th:field="*{urlCapa}"
+                                class="form-control bg-dark text-white border-secondary" placeholder="Ex: https://...">
+                        </div>
+
+                        <div class="mb-3">
                             <label class="form-label">Plataforma</label>
                             <select th:field="*{plataforma}" class="form-select bg-dark text-white border-secondary" required>
                                 <option value="" disabled selected>Selecione uma plataforma</option>
@@ -67,9 +73,31 @@
                             <label class="form-check-label" for="zeradoCheck">Já zerou este jogo? ✅</label>
                         </div>
 
+                        <div id="reviewZeradoSection" class="p-3 mb-3 bg-secondary bg-opacity-25 rounded" style="display: none;">
+                            <div class="mb-2">
+                                <label class="form-label text-success">Nota do Jogo (0 a 10)</label>
+                                <input type="number" th:field="*{notaZerado}" min="0" max="10" class="form-control bg-dark text-white border-secondary">
+                            </div>
+                            <div>
+                                <label class="form-label text-success">Sua Opinião sobre a Jornada</label>
+                                <textarea th:field="*{opiniaoZerado}" class="form-control bg-dark text-white border-secondary" rows="3" placeholder="O que achou do jogo?"></textarea>
+                            </div>
+                        </div>
+
                         <div class="mb-3 form-check">
                             <input type="checkbox" th:field="*{platinado}" class="form-check-input" id="platinadoCheck">
                             <label class="form-check-label" for="platinadoCheck">Já platinou este jogo? 🏆</label>
+                        </div>
+
+                        <div id="reviewPlatinaSection" class="p-3 mb-3 bg-secondary bg-opacity-25 rounded" style="display: none;">
+                            <div class="mb-2">
+                                <label class="form-label text-info">Nota da Platina (0 a 10)</label>
+                                <input type="number" th:field="*{notaPlatina}" min="0" max="10" class="form-control bg-dark text-white border-secondary">
+                            </div>
+                            <div>
+                                <label class="form-label text-info">Sua Opinião sobre a Platina</label>
+                                <textarea th:field="*{opiniaoPlatina}" class="form-control bg-dark text-white border-secondary" rows="3" placeholder="Foi muito difícil platinar?"></textarea>
+                            </div>
                         </div>
 
                         <div class="d-grid gap-2 d-md-block mt-4">
@@ -84,6 +112,27 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const zeradoCheck = document.getElementById('zeradoCheck');
+            const platinadoCheck = document.getElementById('platinadoCheck');
+            const reviewZerado = document.getElementById('reviewZeradoSection');
+            const reviewPlatina = document.getElementById('reviewPlatinaSection');
+
+            function toggleSections() {
+                if(reviewZerado && zeradoCheck) {
+                    reviewZerado.style.display = zeradoCheck.checked ? 'block' : 'none';
+                }
+                if(reviewPlatina && platinadoCheck) {
+                    reviewPlatina.style.display = platinadoCheck.checked ? 'block' : 'none';
+                }
+            }
+
+            if(zeradoCheck) zeradoCheck.addEventListener('change', toggleSections);
+            if(platinadoCheck) platinadoCheck.addEventListener('change', toggleSections);
+            toggleSections(); // run on load
+        });
+    </script>
 </body>
 
 </html>

@@ -19,12 +19,69 @@ body {
 
 .card {
     background-color: #1e1e1e !important;
-    transition: tranform 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+/* Transformando Card em um botão tátil/3D */
+.game-card-button {
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 4px solid #111 !important;
+    cursor: default;
+}
+
+.game-card-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.game-card-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 0px solid transparent !important;
+    margin-top: 4px; /* Compensate for lost border */
+}
+
+/* Imagens das capas */
+.game-cover {
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.game-cover-placeholder {
+    aspect-ratio: 3 / 4;
+    width: 100%;
+}
+
+/* Badge flutuante de Platina sobre a capa */
+.platina-badge-overlay {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(0, 191, 255, 0.8));
+    animation: pulse-glow 2s infinite alternate;
+}
+
+@keyframes pulse-glow {
+    from {
+        filter: drop-shadow(0 0 5px rgba(0, 191, 255, 0.5));
+        transform: scale(1);
+    }
+    to {
+        filter: drop-shadow(0 0 15px rgba(0, 191, 255, 1));
+        transform: scale(1.05);
+    }
+}
+
+.border-success-top {
+    border-top: 3px solid #28a745 !important;
+}
+
+.border-warning-top {
+    border-top: 3px solid #ffc107 !important;
 }
 
 .card-title {
