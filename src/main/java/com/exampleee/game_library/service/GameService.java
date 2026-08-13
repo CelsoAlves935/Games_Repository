@@ -43,4 +43,16 @@ public class GameService {
         repository.save(jogo);
     }
 
+    public long countZerados() {
+        return repository.countByZeradoTrue();
+    }
+
+    public long countPlatinados() {
+        return repository.countByPlatinadoTrue();
+    }
+    
+    public long countAll() {
+        return repository.count();
+    }
+
 }

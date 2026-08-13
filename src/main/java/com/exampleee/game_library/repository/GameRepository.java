@@ -9,4 +9,8 @@ import com.exampleee.game_library.model.Game;
 public interface GameRepository extends JpaRepository<Game, Long> {
     
     public List<Game> findByZerado (boolean zerado) ;
+
+    public long countByZeradoTrue();
+
+    public long countByPlatinadoTrue();
 }

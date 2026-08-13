@@ -22,9 +22,9 @@ public class GameViewController {
     public String home(Model model) {
         List<Game> lista = service.findAll();
         
-        long totalJogos = lista.size();
-        long totalZerados = lista.stream().filter(Game::isZerado).count();
-        long totalPlatinados = lista.stream().filter(Game::isPlatinado).count();
+        long totalJogos = service.countAll();
+        long totalZerados = service.countZerados();
+        long totalPlatinados = service.countPlatinados();
         long porcentagem = totalJogos == 0 ? 0 : (totalPlatinados * 100) / totalJogos;
         
         System.out.println("Quantidade de jogos encontrados: " + totalJogos);
